@@ -4,11 +4,11 @@ import * as productsCtrl from './../controllers/products.controller'
 
 const router = Router()
 
-// router.post('/', productsCtrl.createProducts)
+router.post('/', productsCtrl.createProduct)
 router.get('/', productsCtrl.getProducts)
-router.get('/:productsId', productsCtrl.getProductById)
-router.put('/', productsCtrl.updateProductById)
-router.delete('/', productsCtrl.deleteProductById)
+router.get('/:productId', productsCtrl.getProductById)
+router.put('/:productId', productsCtrl.updateProductById)
+router.delete('/:productId', productsCtrl.deleteProductById)
 
 
 

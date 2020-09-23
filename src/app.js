@@ -9,9 +9,9 @@ const app = express()
 // Guardar una variable en express
 app.set("pkg", pkg);
 
-app.use("/products" ,productRoutes)
-
 app.use(morgan('dev'))
+// Entender los objectos json que llegan al servidor
+app.use(express.json());
 app.get('/', (request, response) => {
     response.json(
         {
@@ -22,6 +22,7 @@ app.get('/', (request, response) => {
     )
 })
 
+app.use("/products" ,productRoutes)
 
 
- export default app
+export default app
