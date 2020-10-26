@@ -2,10 +2,13 @@ import express, { request, response } from 'express'
 import morgan from "morgan"
 import pkg from "./../package.json"
 
+import {createRoles} from "./libs/initialSetup"
+
 import productRoutes from "./routes/products.routes"
 import authRoutes from "./routes/auth.routers"
 
 const app = express()
+createRoles()
 
 // Guardar una variable en express
 app.set("pkg", pkg);

@@ -4,7 +4,8 @@ mongoose.connect('mongodb://apiProducts:apiProducts1@ds237832.mlab.com:37832/api
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-        useCreateIndex:true
+        useCreateIndex:true,
+        useFindAndModify: true
     }
 )
     .then( db => console.log('DB is connected'))
