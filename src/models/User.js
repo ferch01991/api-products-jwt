@@ -15,7 +15,7 @@ const userSchema = new Schema({
         unique: true
     },
     // Relacion de uno a muchos
-    role: [{
+    roles: [{
         ref: "Role",
         type: Schema.Types.ObjectId
     }] 
